@@ -1,0 +1,36 @@
+package org.example;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Company company = Utils.initData();
+        System.out.println("----------------------");
+        System.out.println("Panel Administracyjny");
+        System.out.println("----------------------");
+        boolean done = false;
+        while (!done) {
+                Scanner input = new Scanner(System.in);
+                System.out.println("Jaką operacje chcesz wykonac?");
+                System.out.println("0. Zakoncz prohram 1. Wyswietl pracownikow 2. Dodaj prawocnika 3. Edytuj Pracownika 4. Usun pracownika");
+                System.out.print("Podaj liczbę: ");
+                int number = input.nextInt();
+
+                switch (number){
+                    case 0:
+                        done = true;
+                        break;
+                    case 1:
+                        for (int i = 0; i < company.getEmployees().size(); i++){
+                            System.out.println(company.getEmployees().get(i).getName() + " " + company.getEmployees().get(i).getSurname());
+                        }
+                        break;
+                    case 2:
+                        String name = Utils.input
+                    default:
+                        System.out.println("Podaj liczbe z zakresu");
+                }
+
+            }
+        }
+    }
