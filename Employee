@@ -1,0 +1,14 @@
+package org.example;
+
+public class Employee extends Person {
+    private Departament departament;
+
+    public Employee(Person person, Departament departament) {
+        super(person.getName(), person.getSurname());  // Przekazywanie imienia i nazwiska do klasy Person
+        this.departament = departament;  // Ustawienie działu
+    }
+
+    public Departament getDepartament() {
+        return departament;
+    }
+}
