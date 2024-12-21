@@ -1,0 +1,22 @@
+package org.example;
+
+import java.util.List;
+
+public class Utils {
+    static Company initData(){
+        Person oneperson = new Person("Jan", "Testowy");
+        Employee oneemployee = new Employee(oneperson, Departament.SALES);
+        Person twoperson = new Person("Adam", "Testow");
+        Employee twoemployee = new Employee(twoperson, Departament.ADMINISTRATION);
+        Person threeperson = new Person("Maria", "Testowa");
+        Employee threeemployee = new Employee(threeperson, Departament.FINANCE);
+
+        Company company = new Company("Super Firma");
+
+        List<Employee> employees = company.getEmployees();
+        employees.add(oneemployee);
+        employees.add(twoemployee);
+        employees.add(threeemployee);
+        return company;
+    }
+}
